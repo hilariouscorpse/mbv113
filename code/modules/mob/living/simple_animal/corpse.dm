@@ -148,13 +148,14 @@
 
 
 /obj/effect/landmark/mobcorpse/russian
-	name = "Russian"
-	corpseuniform = /obj/item/clothing/under/soviet
+	name = "Raider"
+	corpseuniform = /obj/item/clothing/under/raider_m
 	corpseshoes = /obj/item/clothing/shoes/jackboots
-	corpsehelmet = /obj/item/clothing/head/bearpelt
+	corpsehelmet = /obj/item/clothing/head/raider
 
 /obj/effect/landmark/mobcorpse/russian/ranged
-	corpsehelmet = /obj/item/clothing/head/ushanka
+	corpsehelmet = /obj/item/clothing/head/raider_mask
+	corpseuniform = /obj/item/clothing/under/raider
 
 /obj/effect/landmark/mobcorpse/wizard
 	name = "Space Wizard"

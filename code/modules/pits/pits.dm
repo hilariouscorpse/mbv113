@@ -41,7 +41,7 @@ obj/dugpit/New(lnk)
 
 
 /turf/simulated/floor/plating/asteroid //floor piece
-	name = "Asteroid"
+	name = "Wasteland"
 	baseturf = /turf/simulated/floor/plating/asteroid
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "asteroid"
