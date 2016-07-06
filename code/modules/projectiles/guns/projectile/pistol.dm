@@ -27,7 +27,7 @@
 /obj/item/weapon/gun/projectile/automatic/pistol/n99
 	name = "10-mm pistol"
 	desc = "Self-loading pistol Colt 6520 10mm. After each shot, the weapon recharges long until the end of the store."
-	icon_state = "n99"
+	icon = 'icons/obj/guns/10mm.png'
 	w_class = 3
 	force = 13
 	origin_tech = "combat=2;materials=2"
