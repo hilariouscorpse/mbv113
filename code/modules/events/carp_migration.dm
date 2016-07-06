@@ -3,7 +3,7 @@
 	typepath = /datum/round_event/carp_migration
 	weight = 15
 	earliest_start = 6000
-	max_occurrences = 6
+	max_occurrences = 0
 
 /datum/round_event/carp_migration
 	announceWhen	= 3

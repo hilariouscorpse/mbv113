@@ -268,6 +268,7 @@
 	item_color = "soviet"
 	can_adjust = 0
 
+
 /obj/item/clothing/under/redcoat
 	name = "redcoat uniform"
 	desc = "Looks old."
@@ -711,6 +712,22 @@
 	item_color = "dress_orange"
 	body_parts_covered = CHEST
 	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = 0
+
+/obj/item/clothing/under/raider
+	name = "Raiders uniform"
+	desc = "Pretty rough"
+	icon_state = "raiderr"
+	item_state = "raiderr"
+	item_color = "raiderr"
+	can_adjust = 0
+
+/obj/item/clothing/under/raider_m
+	name = "Raiders uniform"
+	desc = "Pretty rough"
+	icon_state = "raider"
+	item_state = "raider"
+	item_color = "raider"
 	can_adjust = 0
 
 /obj/item/clothing/under/female/dress_yellow
