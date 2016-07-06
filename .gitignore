@@ -1,12 +1,10 @@
-#ignore misc BYOND files 
-Thumbs.db 
-*.log 
-*.int 
-*.rsc 
-*.dmb 
-*.lk 
-*.backup 
-data/* 
-config/*
 
-config/admins.txt
+#ignore misc BYOND files
+*.log
+*.int
+*.rsc
+*.dmb
+*.lk
+*.backup
+baystation12.dmb
+data/
