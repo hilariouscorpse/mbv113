@@ -62,6 +62,17 @@
 	else if(is_handofgod_bluecultist(user))
 		user << "A banner representing our might against the heretics. We may use it to increase the morale of our fellow members!"
 
+/obj/item/clothing/head/raider
+	name = "Raisers helm"
+	desc = "Makeshift tin helmet"
+	icon_state = "magus"
+	item_state = "magus"
+
+/obj/item/clothing/head/raider_mask
+	name = "Raisers mask"
+	desc = "Strange mask"
+	icon_state = "supafly"
+	item_state = "supafly"
 
 /obj/item/weapon/storage/backpack/bannerpack
 	name = "vault-tec banner backpack"

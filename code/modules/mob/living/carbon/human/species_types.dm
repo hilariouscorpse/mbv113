@@ -156,7 +156,7 @@ datum/species/human/spec_death(gibbed, mob/living/carbon/human/H)
 	H.verbs += /mob/living/carbon/human/proc/hulk_jump
 	H.verbs += /mob/living/carbon/human/proc/hulk_dash
 	H.verbs += /mob/living/carbon/human/proc/hulk_smash
-	if(prob(5) && H.timeofdeath==0)
+	if(prob(5) && H.stat==0)
 		H.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ))
 
 
