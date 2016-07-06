@@ -446,7 +446,8 @@
 
 	loc = S1.loc
 	dir = S1.dir
-
+	previous = S0
+	previous.fill_with_turf(previous.x, previous.y, previous.z, previous.dir)
 /*
 	if(istype(S1, /obj/docking_port/stationary/transit))
 		var/d = turn(dir, 180 + travelDir)
