@@ -7,8 +7,5 @@ Thumbs.db
 *.lk 
 *.backup 
 data/* 
-<<<<<<< HEAD
 config/*
-=======
-config/*
->>>>>>> b6d3cb72e6045fb8ee108301bf121c340498a7fd
+
