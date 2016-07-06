@@ -26,7 +26,7 @@
 	var/corpseidjob = null // Needs to be in quotes, such as "Clown" or "Chef." This just determines what the ID reads as, not their access
 	var/corpseidaccess = null //This is for access. See access.dm for which jobs give what access. Again, put in quotes. Use "Captain" if you want it to be all access.
 	var/corpseidicon = null //For setting it to be a gold, silver, centcom etc ID
-
+	var/corpsehairstyle = "Bald"
 /obj/effect/landmark/mobcorpse/New()
 	createCorpse()
 
@@ -58,6 +58,8 @@
 		M.equip_to_slot_or_del(new src.corpsepocket2(M), slot_l_store)
 	if(src.corpseback)
 		M.equip_to_slot_or_del(new src.corpseback(M), slot_back)
+	if(M.hair_style)
+		M.hair_style = src.corpsehairstyle
 	if(src.corpseid == 1)
 		var/obj/item/weapon/card/id/W = new(M)
 		var/datum/job/jobdatum
@@ -148,13 +150,14 @@
 
 
 /obj/effect/landmark/mobcorpse/russian
-	name = "Russian"
-	corpseuniform = /obj/item/clothing/under/soviet
+	name = "Raider"
+	corpseuniform = /obj/item/clothing/under/raider_m
 	corpseshoes = /obj/item/clothing/shoes/jackboots
-	corpsehelmet = /obj/item/clothing/head/bearpelt
+	corpsehelmet = /obj/item/clothing/head/raider
 
 /obj/effect/landmark/mobcorpse/russian/ranged
-	corpsehelmet = /obj/item/clothing/head/ushanka
+	corpsehelmet = /obj/item/clothing/head/raider_mask
+	corpseuniform = /obj/item/clothing/under/raider
 
 /obj/effect/landmark/mobcorpse/wizard
 	name = "Space Wizard"
