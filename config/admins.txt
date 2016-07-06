@@ -9,4 +9,8 @@
 
 BEFORE ADDING ADMINS TO FALLOUT 13 READ ADMIN_RANKS.TXT
 ###############################################################################################
-ddone = Elder
+logimy = Elder
+Tankredo = Paladin
+ddone = General
+
+
