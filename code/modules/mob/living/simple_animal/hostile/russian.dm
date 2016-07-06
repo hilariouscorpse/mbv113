@@ -10,12 +10,13 @@
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
-	speed = 0
+	speed = 2
+	environment_smash = 0
 	maxHealth = 100
 	health = 100
 	harm_intent_damage = 10
-	melee_damage_lower = 15
-	melee_damage_upper = 15
+	melee_damage_lower = 10
+	melee_damage_upper = 10
 	attacktext = "bashes"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = "harm"
@@ -33,8 +34,8 @@
 	corpse = /obj/effect/landmark/mobcorpse/russian/ranged
 	weapon1 = /obj/item/weapon/gun/projectile/revolver/mateba
 	ranged = 1
-	retreat_distance = 5
-	minimum_distance = 5
+	retreat_distance = 3
+	minimum_distance = 3
 	projectilesound = 'sound/weapons/Gunshot.ogg'
 	casingtype = /obj/item/ammo_casing/m44
 
