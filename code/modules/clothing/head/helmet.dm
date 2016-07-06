@@ -207,6 +207,14 @@
 	icon_state = "metalhelmet"
 	item_state = "metalhelmet"
 
+/obj/item/clothing/head/helmet/f13/metal
+	name = "metal helmet"
+	icon_state = "metalhelmet"
+	item_state = "metalhelmet"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | BLOCKHAIR
+	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 5, bio = 0, rad = 0)
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+
 /obj/item/clothing/head/helmet/knight/fluff/rider
 	name = "rider helmet" //Not raider. Rider.
 	desc = "It's a fancy dark metal helmet with orange spray painted flames."
