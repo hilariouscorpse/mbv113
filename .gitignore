@@ -6,5 +6,5 @@ Thumbs.db
 *.dmb 
 *.lk 
 *.backup 
-data/ 
-config/
+data/* 
+config/*
