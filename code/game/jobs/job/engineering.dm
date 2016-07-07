@@ -88,7 +88,7 @@ Station Engineer
 
 /*
 Atmospheric Technician
-*/
+
 /datum/job/atmos
 	title = "Atmospheric Technician"
 	flag = ATMOSTECH
@@ -117,3 +117,4 @@ Atmospheric Technician
 
 	box = /obj/item/weapon/storage/box/engineer
 	pda_slot = slot_l_store
+	*/
