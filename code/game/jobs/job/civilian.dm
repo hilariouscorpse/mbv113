@@ -1,6 +1,6 @@
 /*
 Clown
-*/
+
 /datum/job/clown
 	title = "Clown"
 	flag = CLOWN
@@ -50,9 +50,9 @@ Clown
 	H.dna.add_mutation(CLOWNMUT)
 	H.rename_self("clown")
 
-/*
+
 Mime
-*/
+
 /datum/job/mime
 	title = "Mime"
 	flag = MIME
@@ -96,7 +96,7 @@ Mime
 		H.mind.miming = 1
 
 	H.rename_self("mime")
-
+*/
 /*
 Librarian
 */

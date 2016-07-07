@@ -45,8 +45,8 @@ var/const/SCAVENGER         =(1<<14)
 
 
 var/list/assistant_occupations = list(
-	"Assistant",
-	"Atmospheric Technician",
+	"Vault Resident",
+	//"Atmospheric Technician",
 	"Cargo Technician",
 	"Chaplain",
 	"Lawyer",
@@ -68,7 +68,7 @@ var/list/command_positions = list(
 var/list/engineering_positions = list(
 	"Chief Engineer",
 	"Station Engineer",
-	"Atmospheric Technician",
+	//"Atmospheric Technician",
 )
 
 
@@ -104,9 +104,9 @@ var/list/civilian_positions = list(
 	"Librarian",
 	"Lawyer",
 	"Chaplain",
-	"Clown",
-	"Mime",
-	"Assistant"
+	///"Clown",
+	///"Mime",
+	"Vault Resident"
 )
 
 
