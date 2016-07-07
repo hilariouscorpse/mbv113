@@ -225,3 +225,9 @@
 	if(current_size >= STAGE_FIVE)
 		if(prob(30))
 			dismantle_wall()
+
+/turf/simulated/wall/r_wall/nodeconstruct
+	desc = "A huge chunk of reinforced metal used to separate rooms. Looks really solid"
+	explosion_block = 3
+/turf/simulated/wall/r_wall/nodeconstruct/try_decon(obj/item/weapon/W, mob/user, turf/T)
+	user << "<span class='notice'>It's to solid for deconstruction</span>"

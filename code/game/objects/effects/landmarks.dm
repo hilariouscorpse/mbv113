@@ -242,6 +242,10 @@
 	var/PICK = pick(loot)
 	for(var/i = 1 to howmuch)
 		new PICK(src.loc)
+<<<<<<< HEAD
+=======
+	qdel(src)
+>>>>>>> Undeconst-walls
 
 /obj/effect/landmark/lootgenerator/food
 	name = "food landmark"
