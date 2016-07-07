@@ -233,6 +233,49 @@
 	new /obj/item/clothing/under/female/sexymime(src.loc)
 	qdel(src)
 
+/obj/effect/landmark/lootgenerator
+	var/list/loot
+	var/max = 6
+
+/obj/effect/landmark/lootgenerator/New()
+	var/howmuch = rand(1,max)
+	var/PICK = pick(loot)
+	for(var/i = 1 to howmuch)
+		new PICK(src.loc)
+	qdel(src)
+
+/obj/effect/landmark/lootgenerator/food
+	name = "food landmark"
+	loot = list(
+	/obj/item/weapon/reagent_containers/food/snacks/beans,
+	/obj/item/weapon/reagent_containers/food/drinks/nukacola,
+	/obj/item/weapon/reagent_containers/food/drinks/beer)
+
+/obj/effect/landmark/lootgenerator/buildmat
+	name = "buildmat landmark"
+	max = 10
+	loot = list(
+	/obj/item/stack/sheet/mineral/gold,
+	/obj/item/stack/sheet/mineral/silver,
+	/obj/item/stack/sheet/mineral/diamond,
+	/obj/item/stack/sheet/mineral/uranium,
+	/obj/item/stack/sheet/metal{amount = 50},
+	/obj/item/stack/sheet/plasteel{amount = 20},
+	/obj/item/stack/sheet/glass{amount = 50},
+	/obj/item/stack/sheet/rglass{amount = 20})
+
+/obj/effect/landmark/lootgenerator/seeds
+	name = "seeds landmark"
+	max = 15
+	loot = list(/obj/item/seeds)
+
+/obj/effect/landmark/lootgenerator/crazy
+	name = "crazy landmark"
+	max = 1
+	loot =list(
+	/obj/item/weapon/reagent_containers/food/drinks/golden_cup/tournament_26_06_2011,
+	/obj/item/clothing/suit/armor/f13/kit,
+	/obj/item/weapon/stock_parts/cell/hyper)
 //Department Security spawns
 
 /obj/effect/landmark/start/depsec
