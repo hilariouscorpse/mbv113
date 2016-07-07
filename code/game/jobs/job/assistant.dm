@@ -2,7 +2,7 @@
 Assistant
 */
 /datum/job/assistant
-	title = "Assistant"
+	title = "Vault Resident"
 	flag = ASSISTANT
 	department_flag = CIVILIAN
 	faction = "Station"
