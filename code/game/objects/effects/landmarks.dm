@@ -242,10 +242,7 @@
 	var/PICK = pick(loot)
 	for(var/i = 1 to howmuch)
 		new PICK(src.loc)
-<<<<<<< HEAD
-=======
 	qdel(src)
->>>>>>> Undeconst-walls
 
 /obj/effect/landmark/lootgenerator/food
 	name = "food landmark"
@@ -253,7 +250,7 @@
 	/obj/item/weapon/reagent_containers/food/snacks/beans,
 	/obj/item/weapon/reagent_containers/food/drinks/nukacola,
 	/obj/item/weapon/reagent_containers/food/drinks/beer)
-
+/*
 /obj/effect/landmark/lootgenerator/buildmat
 	name = "buildmat landmark"
 	max = 10
@@ -278,7 +275,7 @@
 	loot =list(
 	/obj/item/weapon/reagent_containers/food/drinks/golden_cup/tournament_26_06_2011,
 	/obj/item/clothing/suit/armor/f13/kit,
-	/obj/item/weapon/stock_parts/cell/hyper)
+	/obj/item/weapon/stock_parts/cell/hyper)*/
 //Department Security spawns
 
 /obj/effect/landmark/start/depsec
