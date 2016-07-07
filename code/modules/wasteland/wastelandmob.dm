@@ -102,3 +102,20 @@
 	if(!gibbed)
 		visible_message("<span class='danger'>\the [src] stops moving...</span>")
 	..()
+
+/mob/living/simple_animal/hostile/deathclaw
+	name = "Deatclaw"
+	desc = "Run!"
+	icon = 'icons/mob/deathclaw.dmi'
+	icon_state ="deathclaw"
+	icon_dead = "deathclaw_d"
+	icon_gib  = "deathclaw_g"
+	health = 500
+	force_threshold = 10
+	melee_damage_lower = 25
+	melee_damage_upper = 35
+	force_threshold = 10
+	armour_penetration = 5
+	environment_smash = 1
+	speed = -3
+	faction = list("vmob")
