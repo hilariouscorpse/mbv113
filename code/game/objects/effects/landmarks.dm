@@ -280,7 +280,7 @@
 
 /obj/effect/landmark/radmark
 	name = "Radiation field"
-	icon_state = "x2"
+	icon_state = "x3"
 	var/dose = 2
 	var/radius = 0
 
@@ -299,6 +299,15 @@
 /obj/effect/landmark/radmark/Destroy()
 	SSobj.processing.Remove(src)
 	return ..()
+
+/obj/effect/landmark/minespawn
+	name = "spawn mine"
+	var/chance = 10
+/obj/effect/landmark/minespawn/New()
+	var/S = /obj/item/mine/explosive{active = 1}
+	new S(src.loc)
+	..()
+
 
 //Department Security spawns
 

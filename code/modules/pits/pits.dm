@@ -46,7 +46,8 @@ obj/dugpit/New(lnk)
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "asteroid"
 	icon_plating = "asteroid"
-	explosion_block = 999
+	explosion_block = 50
+	layer = TURF_LAYER + 0.1
 	var/environment_type = "wasteland17"
 	var/turf_type = /turf/simulated/floor/plating/asteroid //Because caves do whacky shit to revert to normal
 	var/dug = 0       //0 = has not yet been dug, 1 = has already been dug

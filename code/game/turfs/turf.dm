@@ -359,7 +359,7 @@ turf/indestructible/splashscreen/proc/ticker()
 	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
 	icon_state = "fake_door"
 
-/turf/indestructible/rock
+/turf/simulated/mineral/random/nearvault
 	name = "dense rock"
 	desc = "An extremely densely-packed rock, most mining tools or explosives would never get through this."
 	icon = 'icons/turf/mining.dmi'

@@ -453,7 +453,7 @@ var/list/preferences_datums = list()
 			var/available_in_days = job.available_in_days(user.client)
 			HTML += "<font color=red>[rank]</font></td><td><font color=red> \[IN [(available_in_days)] DAYS\]</font></td></tr>"
 			continue
-		if((job_civilian_low & ASSISTANT) && (rank != "Assistant") && !jobban_isbanned(user, "Assistant"))
+		if((job_civilian_low & ASSISTANT) && (rank != "Vault Resident") && !jobban_isbanned(user, "Vault Resident"))
 			HTML += "<font color=orange>[rank]</font></td><td></td></tr>"
 			continue
 		if(config.enforce_human_authority && !user.client.prefs.pref_species.qualifies_for_rank(rank, user.client.prefs.features))
@@ -516,7 +516,7 @@ var/list/preferences_datums = list()
 
 	HTML += "</center></table>"
 
-	HTML += "<center><br><a href='?_src_=prefs;preference=job;task=random'>[userandomjob ? "Get random job if preferences unavailable" : "Be an Assistant if preference unavailable"]</a></center>"
+	HTML += "<center><br><a href='?_src_=prefs;preference=job;task=random'>[userandomjob ? "Get random job if preferences unavailable" : "Be an Vault Resident if preference unavailable"]</a></center>"
 	HTML += "<center><a href='?_src_=prefs;preference=job;task=reset'>Reset Preferences</a></center>"
 
 	user << browse(null, "window=preferences")
@@ -600,7 +600,7 @@ var/list/preferences_datums = list()
 		ShowChoices(user)
 		return
 
-	if(role == "Assistant")
+	if(role == "Vault Resident")
 		if(job_civilian_low & job.flag)
 			job_civilian_low &= ~job.flag
 		else
@@ -690,7 +690,7 @@ var/list/preferences_datums = list()
 				ResetJobs()
 				SetChoices(user)
 			if("random")
-				if(jobban_isbanned(user, "Assistant"))
+				if(jobban_isbanned(user, "Vault Resident"))
 					userandomjob = 1
 				else
 					userandomjob = !userandomjob
