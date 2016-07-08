@@ -64,7 +64,7 @@ obj/dugpit/New(lnk)
 				"wasteland22", "wasteland23", "wasteland24", "wasteland25", "wasteland26", "wasteland27", "wasteland27",
 				"wasteland28", "wasteland29", "wasteland30", "wasteland31")
 	if(prob(5))
-		obj/S = pick(/obj/structure/flora/grass/wasteland,
+		var/S = pick(/obj/structure/flora/grass/wasteland,
 					/obj/structure/flora/tree/stump,
 					/obj/structure/flora/bush,
 					/obj/structure/flora/tree/wasteland)

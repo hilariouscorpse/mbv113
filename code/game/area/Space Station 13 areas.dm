@@ -546,7 +546,27 @@ var/list/teleportlocs = list()
 	icon_state = "Sleep"
 
 /area/crew_quarters/sleep_resident
-	name = "Residental Rooms"
+	name = "Resident's Rooms"
+	icon_state = "Sleep"
+
+/area/crew_quarters/sleep_resident_bot
+	name = "Resident's Southern Rooms"
+	icon_state = "Sleep"
+
+/area/crew_quarters/sleep_resident_bot_left
+	name = "Resident's Southern-west Rooms"
+	icon_state = "Sleep"
+
+/area/crew_quarters/sleep_resident_mid
+	name = "Resident's Central Rooms"
+	icon_state = "Sleep"
+
+/area/crew_quarters/sleep_resident_mid_right
+	name = "Resident's Central-east Room"
+	icon_state = "Sleep"
+
+/area/crew_quarters/sleep_resident_top
+	name = "Resident's Northern Rooms"
 	icon_state = "Sleep"
 
 /area/crew_quarters/sleep_male
