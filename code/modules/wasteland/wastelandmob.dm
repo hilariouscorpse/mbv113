@@ -112,6 +112,7 @@
 	icon_gib  = "deathclaw_g"
 	health = 500
 	maxHealth = 500
+	turns_per_move = 5
 	force_threshold = 10
 	melee_damage_lower = 50
 	melee_damage_upper = 65
@@ -120,3 +121,5 @@
 	environment_smash = 1
 	speed = -6
 	faction = list("vmob")
+	attacktext = "slashes"
+	attack_sound = 'sound/weapons/slice.ogg'

@@ -276,6 +276,30 @@
 	/obj/item/weapon/reagent_containers/food/drinks/golden_cup/tournament_26_06_2011,
 	/obj/item/clothing/suit/armor/f13/kit,
 	/obj/item/weapon/stock_parts/cell/hyper)
+
+
+/obj/effect/landmark/radmark
+	name = "Radiation field"
+	icon_state = "x2"
+	var/dose = 2
+	var/radius = 0
+
+/obj/effect/landmark/radmark/process()
+	for(var/mob/living/carbon/M in oview(radius, src))
+		if(M.stat != DEAD)
+			M.rad_act(dose)
+		for(var/obj/item/device/geiger_counter/G in M.contents)
+			G.radiation_count+= dose
+	for(var/obj/item/device/geiger_counter/C in oview(radius, src))
+		C.radiation_count+= dose
+	return
+/obj/effect/landmark/radmark/New()
+	SSobj.processing |= src
+	return ..()
+/obj/effect/landmark/radmark/Destroy()
+	SSobj.processing.Remove(src)
+	return ..()
+
 //Department Security spawns
 
 /obj/effect/landmark/start/depsec
