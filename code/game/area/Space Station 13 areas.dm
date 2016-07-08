@@ -545,6 +545,10 @@ var/list/teleportlocs = list()
 	name = "Dormitories"
 	icon_state = "Sleep"
 
+/area/crew_quarters/sleep_resident
+	name = "Residental Rooms"
+	icon_state = "Sleep"
+
 /area/crew_quarters/sleep_male
 	name = "Male Dorm"
 	icon_state = "Sleep"
@@ -560,6 +564,10 @@ var/list/teleportlocs = list()
 /area/crew_quarters/sleep_female/toilet_female
 	name = "Female Toilets"
 	icon_state = "toilet"
+
+/area/crew_quarters/resident_hallway
+	name = "Resident Hallway"
+	icon_state = "yellow"
 
 /area/crew_quarters/locker
 	name = "Locker Room"
