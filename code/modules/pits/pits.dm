@@ -63,12 +63,6 @@ obj/dugpit/New(lnk)
 				"wasteland15", "wasteland16", "wasteland17", "wasteland18", "wasteland19", "wasteland20", "wasteland21",
 				"wasteland22", "wasteland23", "wasteland24", "wasteland25", "wasteland26", "wasteland27", "wasteland27",
 				"wasteland28", "wasteland29", "wasteland30", "wasteland31")
-	if(prob(5))
-		obj/S = pick(/obj/structure/flora/grass/wasteland,
-					/obj/structure/flora/tree/stump,
-					/obj/structure/flora/bush,
-					/obj/structure/flora/tree/wasteland)
-		new S(src.loc)
 /turf/simulated/floor/plating/asteroid/proc/handle_item_insertion(obj/item/W, mob/usr)
 	if(!istype(W))
 		return
