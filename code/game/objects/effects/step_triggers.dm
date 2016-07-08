@@ -217,3 +217,4 @@
 	teleport_y = src.y
 /obj/effect/step_trigger/teleporter/mapside/updown/New()
 	teleport_x = src.x
+
