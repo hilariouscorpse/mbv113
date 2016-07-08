@@ -498,7 +498,7 @@ var/list/preferences_datums = list()
 
 		HTML += "<a class='white' href='?_src_=prefs;preference=job;task=setJobLevel;level=[prefUpperLevel];text=[rank]' oncontextmenu='javascript:return setJobPrefRedirect([prefLowerLevel], \"[rank]\");'>"
 
-		if(rank == "Assistant")//Assistant is special
+		if(rank == "Vault Resident")//Assistant is special
 			if(job_civilian_low & ASSISTANT)
 				HTML += "<font color=green>Yes</font>"
 			else

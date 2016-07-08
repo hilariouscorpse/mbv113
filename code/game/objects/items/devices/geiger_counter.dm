@@ -41,6 +41,11 @@
 	if(emagged)
 		user << "<span class='warning'>The display seems to be incomprehensible.</span>"
 		return 1
+	if(radiation_count>RAD_LEVEL_NORMAL)
+		var/sound = pick('sound/items/detectors/geiger_1.ogg','sound/items/detectors/geiger_2.ogg','sound/items/detectors/geiger_3.ogg',
+							'sound/items/detectors/geiger_4.ogg','sound/items/detectors/geiger_5.ogg','sound/items/detectors/geiger_6.ogg',
+							'sound/items/detectors/geiger_7.ogg','sound/items/detectors/geiger_7.ogg')
+		playsound(user, sound, 50, 1)
 	switch(radiation_count)
 		if(-INFINITY to RAD_LEVEL_NORMAL)
 			user << "<span class='notice'>Ambient radiation level count reports that all is well.</span>"

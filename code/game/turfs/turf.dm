@@ -364,7 +364,7 @@ turf/indestructible/splashscreen/proc/ticker()
 	desc = "An extremely densely-packed rock, most mining tools or explosives would never get through this."
 	icon = 'icons/turf/mining.dmi'
 	icon_state = "rock"
-
+	explosion_block = 4
 /turf/indestructible/rock/snow
 	name = "mountainside"
 	desc = "An extremely densely-packed rock, sheeted over with centuries worth of ice and snow."
