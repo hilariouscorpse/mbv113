@@ -258,7 +258,7 @@
 	return 0
 
 /turf/simulated/wall/undeconst
-
+	icon = 'icons/turf/walls/wall.dmi'
 
 /turf/simulated/wall/undeconst/try_decon(obj/item/weapon/W, mob/user, turf/T)
 	user << "U can't deconstruct concrete wall"
