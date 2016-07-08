@@ -1,8 +1,8 @@
-##Fallout 13 Alpha 0.3
+##Fallout 13 Alpha 0.31
 
 **Website:** http://wasteland.expert <BR>
 **Devblog:** https://www.reddit.com/r/Fallout13 <BR>
-**Code:** https://github.com/BartNixon/Fallout13 <BR>
+**Code:** https://github.com/MadBay/mbv113 <BR>
 
 ##Attention!
 Thanks to the laborious efforts of Byond maintenance team, and drastic changes while working on creation of Byond version 510, the build became incompatible with 510, due to several changes in scripts and other things we can't manage to edit. <BR>
@@ -13,11 +13,10 @@ You can get any of previous editions of Byond engine at [official Byond versions
 Also you can [get Byond 508.1299](http://www.byond.com/download/build/508/) for the best gaming experience. <BR>
 
 ##Credits
-_To find out the great deeds of the following people, read the full [Fallout 13 changelog](https://github.com/BartNixon/Fallout13/blob/master/F13-CHANGELOG.txt)._ <BR>
 
-**Code:** KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please. <BR>
+**Code:** KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please, ddone, logimy. <BR>
 
-**Graphics / Sprites / Icons:** Ivan_mrr, Nienhaus, WalterJe, MrSnapwalk, BartNixon, Llego_man007, Uboaaaaaa, BlackJack22, The_Harvester, Lydee, Murmillo, DoctorWho08, Alexlox.
+**Graphics / Sprites / Icons:** Ivan_mrr, Nienhaus, WalterJe, MrSnapwalk, BartNixon, Llego_man007, Uboaaaaaa, BlackJack22, The_Harvester, Lydee, Murmillo, DoctorWho08, Alexlox, YulianZ.
 
 **Origins:** <BR>
 Currently the build contains code, graphics, sounds and specific build features of several Space Station 13 communities listed below. <BR>
