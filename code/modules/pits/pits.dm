@@ -57,6 +57,13 @@ obj/dugpit/New(lnk)
 	var/obj/dugpit/mypit
 	var/unburylevel = 0
 
+/turf/simulated/floor/plating/asteroid/New()
+	icon_state = pick("wasteland1", "wasteland2", "wasteland3", "wasteland4", "wasteland5", "wasteland6", "wasteland7",
+				"wasteland8", "wasteland9", "wasteland10", "wasteland11", "wasteland12", "wasteland13", "wasteland14",
+				"wasteland15", "wasteland16", "wasteland17", "wasteland18", "wasteland19", "wasteland20", "wasteland21",
+				"wasteland22", "wasteland23", "wasteland24", "wasteland25", "wasteland26", "wasteland27", "wasteland27",
+				"wasteland28", "wasteland29", "wasteland30", "wasteland31")
+
 /turf/simulated/floor/plating/asteroid/proc/handle_item_insertion(obj/item/W, mob/usr)
 	if(!istype(W))
 		return
