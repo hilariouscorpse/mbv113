@@ -217,5 +217,5 @@
 	name = "Radaway"
 	id = "antirad"
 	result = "antirad"
-	required_reagents = list("antitoxin" = 1, "radium" = 1)
+	required_reagents = list("charcoal" = 1, "radium" = 1)
 	result_amount = 2

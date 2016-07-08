@@ -46,7 +46,8 @@ obj/dugpit/New(lnk)
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "asteroid"
 	icon_plating = "asteroid"
-	explosion_block = 999
+	explosion_block = 50
+	layer = TURF_LAYER + 0.1
 	var/environment_type = "wasteland17"
 	var/turf_type = /turf/simulated/floor/plating/asteroid //Because caves do whacky shit to revert to normal
 	var/dug = 0       //0 = has not yet been dug, 1 = has already been dug
@@ -63,9 +64,6 @@ obj/dugpit/New(lnk)
 				"wasteland15", "wasteland16", "wasteland17", "wasteland18", "wasteland19", "wasteland20", "wasteland21",
 				"wasteland22", "wasteland23", "wasteland24", "wasteland25", "wasteland26", "wasteland27", "wasteland27",
 				"wasteland28", "wasteland29", "wasteland30", "wasteland31")
-
-
-
 /turf/simulated/floor/plating/asteroid/proc/handle_item_insertion(obj/item/W, mob/usr)
 	if(!istype(W))
 		return
