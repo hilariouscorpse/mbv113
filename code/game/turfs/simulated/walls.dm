@@ -260,5 +260,5 @@
 /turf/simulated/wall/undeconst
 
 
-/turf/simulated/wall/undeconst/proc/try_decon(obj/item/weapon/W, mob/user, turf/T)
+/turf/simulated/wall/undeconst/try_decon(obj/item/weapon/W, mob/user, turf/T)
 	user << "U can't deconstruct concrete wall"
