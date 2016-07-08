@@ -962,3 +962,18 @@ datum/reagent/medicine/syndicate_nanites/on_mob_life(mob/living/M)
 	M.adjustCloneLoss(-3*REM)
 	..()
 	return
+
+datum/reagent/meicine/antirad
+	name = "Radaway"
+	id = "antirad"
+	description = "Outputs radiation from body"
+	color = "#D8FDFF"
+	metabolization_rate = 2 * REAGENTS_METABOLISM
+
+datum/reagent/meicine/antirad/on_mob_life(mob/living/M)
+	if(M.radiation > 0)
+		M.radiation--
+	if(M.radiation < 0)
+		M.radiation = 0
+	..()
+	return
