@@ -47,7 +47,7 @@ obj/dugpit/New(lnk)
 	icon_state = "asteroid"
 	icon_plating = "asteroid"
 	explosion_block = 999
-	var/environment_type = "asteroid"
+	var/environment_type = "wasteland17"
 	var/turf_type = /turf/simulated/floor/plating/asteroid //Because caves do whacky shit to revert to normal
 	var/dug = 0       //0 = has not yet been dug, 1 = has already been dug
 	var/storedindex = 0 //amount of stored items
@@ -63,12 +63,15 @@ obj/dugpit/New(lnk)
 				"wasteland15", "wasteland16", "wasteland17", "wasteland18", "wasteland19", "wasteland20", "wasteland21",
 				"wasteland22", "wasteland23", "wasteland24", "wasteland25", "wasteland26", "wasteland27", "wasteland27",
 				"wasteland28", "wasteland29", "wasteland30", "wasteland31")
+<<<<<<< HEAD
 	if(prob(5))
 		var/S = pick(/obj/structure/flora/grass/wasteland,
 					/obj/structure/flora/tree/stump,
 					/obj/structure/flora/bush,
 					/obj/structure/flora/tree/wasteland)
 		new S(src.loc)
+=======
+>>>>>>> origin/master
 /turf/simulated/floor/plating/asteroid/proc/handle_item_insertion(obj/item/W, mob/usr)
 	if(!istype(W))
 		return
