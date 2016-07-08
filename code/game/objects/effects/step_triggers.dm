@@ -189,19 +189,31 @@
 
 	if(happens_once)
 		qdel(src)
-/obj/effect/step_trigger/teleporter/mapside
+/obj/effect/step_trigger/teleporter/mapside/lefright
+/obj/effect/step_trigger/teleporter/mapside/updown
 
-/obj/effect/step_trigger/teleporter/mapside/right
+/obj/effect/step_trigger/teleporter/mapside/lefright/right
 	name = "Right teleporter z1 to z8"
 	affect_ghosts = 1
 	teleport_x = 8
 	teleport_z = 8
 
-/obj/effect/step_trigger/teleporter/mapside/left
+/obj/effect/step_trigger/teleporter/mapside/lefright/left
 	name = "Left teleporter z8 to z1"
 	affect_ghosts = 1
 	teleport_x = 247
 	teleport_z = 1
 
-/obj/effect/step_trigger/teleporter/mapside/New()
+/obj/effect/step_trigger/teleporter/mapside/updown/up
+	name = "Up teleporter z1 to z10"
+	teleport_y = 8
+	teleport_z = 10
+/obj/effect/step_trigger/teleporter/mapside/updown/down
+	name = "Up teleporter z10 to z1"
+	teleport_y = 247
+	teleport_z = 1
+
+/obj/effect/step_trigger/teleporter/mapside/leftright/New()
 	teleport_y = src.y
+/obj/effect/step_trigger/teleporter/mapside/updown/New()
+	teleport_x = src.x
