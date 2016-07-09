@@ -11,7 +11,6 @@
 	response_disarm = "shoves"
 	response_harm = "hits"
 	speed = 2
-	environment_smash = 0
 	maxHealth = 100
 	health = 100
 	harm_intent_damage = 10

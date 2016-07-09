@@ -112,6 +112,8 @@
 /mob/living/simple_animal/hostile/CanAttack(atom/the_target)//Can we actually attack a possible target?
 	if(see_invisible < the_target.invisibility)//Target's invisible to us, forget it
 		return 0
+	if(istype(the_target,/obj/structure/closet/cardboard))
+		return 1
 	if(search_objects < 2)
 		if(istype(the_target, /obj/mecha))
 			var/obj/mecha/M = the_target
