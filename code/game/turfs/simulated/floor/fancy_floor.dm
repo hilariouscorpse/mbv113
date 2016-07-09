@@ -9,6 +9,12 @@
 	floor_tile = /obj/item/stack/tile/wood
 	broken_states = list("wood-broken", "wood-broken2", "wood-broken3", "wood-broken4", "wood-broken5", "wood-broken6", "wood-broken7")
 
+/turf/simulated/floor/wood_m
+	name = "Wooden floor"
+	icon = 'icons/turf/floors/w_floor.dmi'
+	icon_state = "main"
+	floor_tile = /obj/item/stack/tile/wood
+
 /turf/simulated/floor/wood/attackby(obj/item/C, mob/user, params)
 	if(..())
 		return
@@ -25,7 +31,6 @@
 	name = "Grass patch"
 	icon_state = "grass"
 	explosion_block = 50
-	layer = TURF_LAYER + 0.1
 	floor_tile = /obj/item/stack/tile/grass
 	broken_states = list("sand")
 

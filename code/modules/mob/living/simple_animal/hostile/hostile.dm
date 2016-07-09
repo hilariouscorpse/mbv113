@@ -70,6 +70,8 @@
 		for(var/obj/mecha/M in mechas_list)
 			if(get_dist(M, src) <= vision_range && can_see(src, M, vision_range))
 				L += M
+		for(var/obj/structure/closet/cardboard/C in oview(src, vision_range))
+			L += C
 	else
 		var/list/Objects = oview(vision_range, src)
 		L += Objects
