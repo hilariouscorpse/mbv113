@@ -265,5 +265,5 @@
 
 /turf/simulated/wall/wooden
 	name = "Wooden wall"
-	icon = 'icons/turf/walls/w_walls.dmi'
+	icon = 'icons/turf/walls/w_wall.dmi'
 	icon_state = "main"
