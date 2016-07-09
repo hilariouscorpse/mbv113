@@ -1,4 +1,4 @@
-##Fallout 13 Alpha 0.31
+##Fallout 13 Alpha 0.32a
 
 **Website:** http://wasteland.expert <BR>
 **Devblog:** https://www.reddit.com/r/Fallout13 <BR>
@@ -14,9 +14,9 @@ Also you can [get Byond 508.1299](http://www.byond.com/download/build/508/) for 
 
 ##Credits
 
-**Code:** KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please, ddone, logimy. <BR>
+**Code:** KorPhaeron, RemieRichards, WB, AnturK, BartNixon, A3lex33, Gyaviste, Hold_Me_Please, ddone, logimy, BlueCrab. <BR>
 
-**Graphics / Sprites / Icons:** Ivan_mrr, Nienhaus, WalterJe, MrSnapwalk, BartNixon, Llego_man007, Uboaaaaaa, BlackJack22, The_Harvester, Lydee, Murmillo, DoctorWho08, Alexlox, YulianZ.
+**Graphics / Sprites / Icons:** Ivan_mrr, Nienhaus, WalterJe, MrSnapwalk, BartNixon, Llego_man007, Uboaaaaaa, BlackJack22, The_Harvester, Lydee, Murmillo, DoctorWho08, Alexlox, YulianZ, BlueCrab.
 
 **Origins:** <BR>
 Currently the build contains code, graphics, sounds and specific build features of several Space Station 13 communities listed below. <BR>
