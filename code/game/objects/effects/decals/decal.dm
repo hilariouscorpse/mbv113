@@ -13,7 +13,16 @@
 	icon = 'icons/obj/decals.dmi'
 	icon_state = "rag" //ventred, ventorange
 	level = 4.2
-
+/obj/effect/decal/singlewhite
+	name = "white line"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singlewhite"
+	evel = 2.1
+/obj/effect/decal/parkline
+	name = "parking line"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "parkingline"
+	evel = 2.1
 /obj/effect/decal/sign //Signs.
 	name = "sign"
 	desc = "It's a standart sign, intended to provide some important (or not so) information about the current location."
