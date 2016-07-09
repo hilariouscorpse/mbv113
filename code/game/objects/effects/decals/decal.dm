@@ -13,16 +13,101 @@
 	icon = 'icons/obj/decals.dmi'
 	icon_state = "rag" //ventred, ventorange
 	level = 4.2
-/obj/effect/decal/singlewhite
-	name = "white line"
+/obj/effect/decal/singewhite_horizontal
+	name = "white line horizontal"
 	icon = 'icons/obj/decals.dmi'
-	icon_state = "singlewhite"
-	evel = 2.1
-/obj/effect/decal/parkline
-	name = "parking line"
+	icon_state = "singewhite_horizontal"
+	level = 2.1
+/obj/effect/decal/singewhite_vertical
+	name = "white line vertical"
 	icon = 'icons/obj/decals.dmi'
-	icon_state = "parkingline"
-	evel = 2.1
+	icon_state = "singewhite_vertical"
+	level = 2.1
+/obj/effect/decal/singewhite_cross
+	name = "white line cross"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_cross"
+	level = 2.1
+/obj/effect/decal/singewhite_t1
+	name = "white line t1"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_t1"
+	level = 2.1
+/obj/effect/decal/singewhite_t2
+	name = "white line t2"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_t2"
+	level = 2.1
+/obj/effect/decal/singewhite_t3
+	name = "white line t3"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_t3"
+	level = 2.1
+/obj/effect/decal/singewhite_t4
+	name = "white line t4"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_t4"
+	level = 2.1
+/obj/effect/decal/singewhite_t11
+	name = "white line t11"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_t11"
+	level = 2.1
+/obj/effect/decal/singewhite_t21
+	name = "white line t21"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_t21"
+	level = 2.1
+/obj/effect/decal/singewhite_t31
+	name = "white line t31"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_t31"
+	level = 2.1
+/obj/effect/decal/singewhite_t41
+	name = "white line t41"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_t41"
+	level = 2.1
+/obj/effect/decal/singewhite_corner_1
+	name = "parking line corner 1"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_corner_1"
+	level = 2.1
+/obj/effect/decal/singewhite_corner_2
+	name = "parking line corner 2"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_corner_2"
+	level = 2.1
+/obj/effect/decal/singewhite_corner_3
+	name = "parking line corner 3"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_corner_3"
+	level = 2.1
+/obj/effect/decal/singewhite_corner_4
+	name = "parking line corner 4"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "singewhite_corner_4"
+	level = 2.1
+/obj/effect/decal/parkingline_n
+	name = "parking line north"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "parkingline_n"
+	level = 2.1
+/obj/effect/decal/parkingline_s
+	name = "parking line south"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "parkingline_s"
+	level = 2.1
+/obj/effect/decal/parkingline_e
+	name = "parking line east"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "parkingline_e"
+	level = 2.1
+/obj/effect/decal/parkingline_w
+	name = "parking line west"
+	icon = 'icons/obj/decals.dmi'
+	icon_state = "parkingline_w"
+	level = 2.1
 /obj/effect/decal/sign //Signs.
 	name = "sign"
 	desc = "It's a standart sign, intended to provide some important (or not so) information about the current location."
