@@ -28,8 +28,7 @@ Scavenger
 		/obj/item/clothing/under/pj/blue,\
 		/obj/item/clothing/under/waiter,\
 		/obj/item/clothing/under/f13/settler,\
-		/obj/item/clothing/under/f13/doctor,\
-		/obj/item/clothing/under/f13/brahmin,\
+
 		/obj/item/clothing/under/f13/mercadv,\
 		/obj/item/clothing/under/f13/springm,\
 		/obj/item/clothing/under/f13/caravaneer,\
@@ -39,9 +38,7 @@ Scavenger
 	if (prob(80))
 		l_hand = pick(/obj/item/weapon/kitchen/knife,\
 			/obj/item/weapon/storage/toolbox/mechanical,\
-			/obj/item/weapon/storage/firstaid/brute,\
-			/obj/item/weapon/gun/projectile/shotgun,\
-			/obj/item/weapon/melee/classic_baton)
+			/obj/item/weapon/twohanded/spear)
 
 
 	if (prob(100))
@@ -49,7 +46,31 @@ Scavenger
 		backpack = /obj/item/weapon/storage/backpack
 		satchel = /obj/item/weapon/storage/backpack/satchel_norm
 		backpack_contents = pick(list(/obj/item/weapon/melee/classic_baton/telescopic=1), \
-			list(/obj/item/ammo_casing/shotgun/buckshot = 4), \
 			list(/obj/item/weapon/reagent_containers/food/drinks/nukacola = 3), \
-			list(/obj/item/weapon/storage/firstaid/brute), \
+			list(/obj/item/weapon/reagent_containers/pill/patch/styptic), \
 			list(/obj/item/weapon/reagent_containers/syringe/stimulants))
+
+/datum/job/scavenger/medic
+	title = "Wasteland medic"
+
+/datum/outfit/job/scavenger/medic/pre_equip(mob/living/carbon/human/H)
+	..()
+	uniform = /obj/item/clothing/under/f13/doctor
+	back = /obj/item/weapon/storage/backpack
+	satchel = /obj/item/weapon/storage/backpack/satchel_norm
+	backpack = /obj/item/weapon/storage/backpack
+	backpack_contents = pick(list(/obj/item/weapon/storage/firstaid/brute = 1,/obj/item/weapon/scalpel = 1),\
+								list(/obj/item/weapon/storage/firstaid/fire = 1, /obj/item/weapon/cautery = 1))
+
+
+/datum/job/scavenger/trader
+	title = "Trader"
+
+/datum/outfit/job/scavenger/trader/pre_equip(mob/living/carbon/human/H)
+	..()
+	uniform = /obj/item/clothing/under/f13/brahmin
+	back = /obj/item/weapon/storage/backpack
+	satchel = /obj/item/weapon/storage/backpack/satchel_norm
+	backpack = /obj/item/weapon/storage/backpack
+	l_hand = /obj/item/weapon/storage/backpack/dufflebag
+	backpack_contents = /obj/item/weapon/storage/wallet

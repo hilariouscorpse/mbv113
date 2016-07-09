@@ -1598,7 +1598,16 @@ var/list/the_station_areas = list (
 	/area/construction,
 	/area/ai_monitored/storage/eva,
 	/area/crew_quarters/resident_hallway,
-	/area/crew_quarters/sleep_resident  //do not try to simplify to "/area/ai_monitored" --rastaf0
+	/area/crew_quarters/sleep_resident_bot,
+	/area/crew_quarters/sleep_resident_lower_left,
+	/area/crew_quarters/sleep_resident_mid,
+	/area/crew_quarters/sleep_resident_mid_right,
+	/area/crew_quarters/sleep_resident_top,
+
+
+
+
+//do not try to simplify to "/area/ai_monitored" --rastaf0
 //	/area/ai_monitored/storage/secure,	//not present on map
 //	/area/ai_monitored/storage/emergency,	//not present on map
 	//area/turret_protected/ai_upload, //do not try to simplify to "/area/turret_protected" --rastaf0
