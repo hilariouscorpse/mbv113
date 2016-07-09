@@ -50,10 +50,26 @@ Scavenger
 			list(/obj/item/weapon/reagent_containers/pill/patch/styptic), \
 			list(/obj/item/weapon/reagent_containers/syringe/stimulants))
 
-/datum/job/scavenger/medic
+/datum/job/wmedic
 	title = "Wasteland medic"
-
-/datum/outfit/job/scavenger/medic/pre_equip(mob/living/carbon/human/H)
+	flag = SCAVENGER
+	department_flag = CIVILIAN
+	faction = "Desert" //desert faction shall disable appearing as scavenger after readying
+	total_positions = -1
+	spawn_positions = -1 //does not matter for late join
+	supervisors = "nobody"
+	selection_color = "#dddddd"
+	access = list()
+	minimal_access = list()
+	outfit = /datum/outfit/job/wmedic
+/datum/outfit/job/wmedic
+	name = "Wasteland medic"
+	id = null
+	ears = null
+	belt = null
+	backpack = null
+	satchel = null
+/datum/outfit/job/wmedic/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = /obj/item/clothing/under/f13/doctor
 	back = /obj/item/weapon/storage/backpack
@@ -63,10 +79,29 @@ Scavenger
 								list(/obj/item/weapon/storage/firstaid/fire = 1, /obj/item/weapon/cautery = 1))
 
 
-/datum/job/scavenger/trader
-	title = "Trader"
 
-/datum/outfit/job/scavenger/trader/pre_equip(mob/living/carbon/human/H)
+
+
+/datum/job/wtrader
+	title = "Trader"
+	flag = SCAVENGER
+	department_flag = CIVILIAN
+	faction = "Desert" //desert faction shall disable appearing as scavenger after readying
+	total_positions = -1
+	spawn_positions = -1 //does not matter for late join
+	supervisors = "nobody"
+	selection_color = "#dddddd"
+	access = list()
+	minimal_access = list()
+	outfit = /datum/outfit/job/wtrader
+/datum/outfit/job/wtrader
+	name = "Trader"
+	id = null
+	ears = null
+	belt = null
+	backpack = null
+	satchel = null
+/datum/outfit/job/wtrader/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = /obj/item/clothing/under/f13/brahmin
 	back = /obj/item/weapon/storage/backpack

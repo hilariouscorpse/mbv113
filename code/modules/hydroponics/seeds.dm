@@ -25,6 +25,8 @@
 
 /obj/item/seeds/New(loc, parent)
 	..()
+	if(name != "A pack of seeds.")
+		return
 	var/N = pick(/obj/item/seeds/ambrosiavulgarisseed ,/obj/item/seeds/appleseed ,/obj/item/seeds/bananaseed ,/obj/item/seeds/berryseed ,
 						/obj/item/seeds/cabbageseed ,/obj/item/seeds/carrotseed ,/obj/item/seeds/cherryseed ,/obj/item/seeds/chantermycelium ,
 						/obj/item/seeds/chiliseed ,/obj/item/seeds/cocoapodseed ,/obj/item/seeds/coffee_arabica_seed ,/obj/item/seeds/cornseed ,

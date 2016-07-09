@@ -192,13 +192,13 @@
 /obj/effect/step_trigger/teleporter/mapside/lefright
 /obj/effect/step_trigger/teleporter/mapside/updown
 
-/obj/effect/step_trigger/teleporter/mapside/lefright/right
+/obj/effect/step_trigger/teleporter/mapside/leftright/right
 	name = "Right teleporter z1 to z8"
 	affect_ghosts = 1
 	teleport_x = 8
 	teleport_z = 8
 
-/obj/effect/step_trigger/teleporter/mapside/lefright/left
+/obj/effect/step_trigger/teleporter/mapside/leftright/left
 	name = "Left teleporter z8 to z1"
 	affect_ghosts = 1
 	teleport_x = 247

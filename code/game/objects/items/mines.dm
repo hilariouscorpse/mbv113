@@ -120,3 +120,6 @@
 /obj/item/mine/sound/bwoink
 	name = "bwoink mine"
 	sound = 'sound/effects/adminhelp.ogg'
+
+/obj/item/mine/explosive/active
+	active = 1

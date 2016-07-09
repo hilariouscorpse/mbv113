@@ -1599,7 +1599,7 @@ var/list/the_station_areas = list (
 	/area/ai_monitored/storage/eva,
 	/area/crew_quarters/resident_hallway,
 	/area/crew_quarters/sleep_resident_bot,
-	/area/crew_quarters/sleep_resident_lower_left,
+	/area/crew_quarters/sleep_resident_bot_left,
 	/area/crew_quarters/sleep_resident_mid,
 	/area/crew_quarters/sleep_resident_mid_right,
 	/area/crew_quarters/sleep_resident_top,
