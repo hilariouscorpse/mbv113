@@ -78,10 +78,6 @@
 	..()
 
 /obj/item/device/geiger_counter/rad_act(amount)
-	var/sound = pick('sound/items/detectors/geiger_1.ogg','sound/items/detectors/geiger_2.ogg','sound/items/detectors/geiger_3.ogg',
-						'sound/items/detectors/geiger_4.ogg','sound/items/detectors/geiger_5.ogg','sound/items/detectors/geiger_6.ogg',
-						'sound/items/detectors/geiger_7.ogg','sound/items/detectors/geiger_7.ogg')
-	playsound(user,sound, 100, 1)
 	if(!amount && scanning)
 		return 0
 	if(emagged)
@@ -90,6 +86,10 @@
 	if(isliving(loc))
 		var/mob/living/M = loc
 		if(!emagged)
+			var/sound = pick('sound/items/detectors/geiger_1.ogg','sound/items/detectors/geiger_2.ogg','sound/items/detectors/geiger_3.ogg',
+						'sound/items/detectors/geiger_4.ogg','sound/items/detectors/geiger_5.ogg','sound/items/detectors/geiger_6.ogg',
+						'sound/items/detectors/geiger_7.ogg','sound/items/detectors/geiger_7.ogg')
+			playsound(M,sound, 100, 1)
 			M << "<span class='boldannounce'>\icon[src] RADIATION PULSE DETECTED.</span>"
 			M << "<span class='boldannounce'>\icon[src] Severity: [amount]</span>"
 		else
