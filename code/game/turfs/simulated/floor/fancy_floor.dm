@@ -24,6 +24,8 @@
 /turf/simulated/floor/grass
 	name = "Grass patch"
 	icon_state = "grass"
+	explosion_block = 50
+	layer = TURF_LAYER + 0.1
 	floor_tile = /obj/item/stack/tile/grass
 	broken_states = list("sand")
 
