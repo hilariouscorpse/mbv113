@@ -44,7 +44,7 @@
 		//heart attack stuff
 		handle_heart()
 		handleorgans()
-
+		handlenutrition()
 		//Stuff jammed in your limbs hurts
 		handle_embedded_objects()
 	//Update our name based on whether our face is obscured/disfigured
@@ -59,6 +59,9 @@
 	else
 		return pressure
 
+/mob/living/carbon/human/proc/handlenutrition()
+	if(nutrition < NUTRITION_LEVEL_STARVING && staminaloss < 75)
+		apply_damage(10, STAMINA)
 
 /mob/living/carbon/human/handle_disabilities()
 	..()

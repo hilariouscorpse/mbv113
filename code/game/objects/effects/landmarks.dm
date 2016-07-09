@@ -236,6 +236,7 @@
 /obj/effect/landmark/lootgenerator
 	var/list/loot
 	var/max = 6
+	var/amount = 1
 
 /obj/effect/landmark/lootgenerator/New()
 	var/howmuch = rand(1,max)
@@ -276,7 +277,6 @@
 	/obj/item/weapon/reagent_containers/food/drinks/golden_cup/tournament_26_06_2011,
 	/obj/item/clothing/suit/armor/f13/kit,
 	/obj/item/weapon/stock_parts/cell/hyper)
-
 
 /obj/effect/landmark/radmark
 	name = "Radiation field"
