@@ -25,9 +25,18 @@
 
 /obj/item/seeds/New(loc, parent)
 	..()
-	pixel_x = rand(-8, 8)
-	pixel_y = rand(-8, 8)
-
+	var/N = pick(/obj/item/seeds/ambrosiavulgarisseed ,/obj/item/seeds/appleseed ,/obj/item/seeds/bananaseed ,/obj/item/seeds/berryseed ,
+						/obj/item/seeds/cabbageseed ,/obj/item/seeds/carrotseed ,/obj/item/seeds/cherryseed ,/obj/item/seeds/chantermycelium ,
+						/obj/item/seeds/chiliseed ,/obj/item/seeds/cocoapodseed ,/obj/item/seeds/coffee_arabica_seed ,/obj/item/seeds/cornseed ,
+						/obj/item/seeds/eggplantseed ,/obj/item/seeds/grapeseed ,/obj/item/seeds/grassseed ,/obj/item/seeds/lemonseed ,
+						/obj/item/seeds/limeseed ,/obj/item/seeds/orangeseed ,/obj/item/seeds/potatoseed ,/obj/item/seeds/poppyseed ,
+						/obj/item/seeds/pumpkinseed ,/obj/item/seeds/replicapod ,/obj/item/seeds/soyaseed ,/obj/item/seeds/sunflowerseed ,
+						/obj/item/seeds/tea_aspera_seed ,/obj/item/seeds/tobacco_seed ,/obj/item/seeds/tomatoseed ,
+						/obj/item/seeds/towermycelium ,/obj/item/seeds/watermelonseed ,/obj/item/seeds/wheatseed ,/obj/item/seeds/whitebeetseed )
+	new N(src.loc)
+	//N.pixel_x = rand(-8, 8)
+	//N.pixel_y = rand(-8, 8)
+	qdel(src)
 /obj/item/seeds/proc/get_analyzer_text()  //in case seeds have something special to tell to the analyzer
 	return
 
