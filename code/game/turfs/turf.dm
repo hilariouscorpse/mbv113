@@ -365,6 +365,8 @@ turf/indestructible/splashscreen/proc/ticker()
 	icon = 'icons/turf/mining.dmi'
 	icon_state = "rock"
 	explosion_block = 4
+/turf/simulated/mineral/random/nearvault/New()
+	return
 /turf/indestructible/rock/snow
 	name = "mountainside"
 	desc = "An extremely densely-packed rock, sheeted over with centuries worth of ice and snow."
