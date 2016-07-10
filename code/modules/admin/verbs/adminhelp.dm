@@ -105,7 +105,6 @@
 	for(var/client/X in admins)
 		if(X.prefs.toggles & SOUND_ADMINHELP)
 			X << 'sound/effects/adminhelp.ogg'
-		msg = sanitize(msg)
 		X << msg
 
 

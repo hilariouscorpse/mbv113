@@ -146,3 +146,8 @@
 	icon_state = "pill5"
 	list_reagents = list("insulin" = 50)
 	roundstart = 1
+/obj/item/weapon/reagent_containers/pill/radaway
+	name = "radaway pill"
+	desc = "Clears out radiation"
+	icon_state = "pill5"
+	list_reagents = list("antirad" = 15)

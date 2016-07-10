@@ -89,6 +89,7 @@ Works together with spawning an observer, noted above.
 			SSnano.on_transfer(src, ghost) // Transfer NanoUIs.
 			ghost.can_reenter_corpse = can_reenter_corpse
 			ghost.key = key
+			ghost.timeofdeath = src.timeofdeath
 			return ghost
 
 /*
