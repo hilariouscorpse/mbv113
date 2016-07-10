@@ -1,0 +1,4 @@
+/obj/item/weapon/reagent_containers/food/snacks/burger/rat
+/obj/item/weapon/reagent_containers/food/snacks/beans
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/meatproduct
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/bear
