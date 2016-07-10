@@ -593,6 +593,10 @@ var/list/teleportlocs = list()
 	name = "Locker Room"
 	icon_state = "locker"
 
+/area/crew_quarters/vault_locker
+	name = "Vault Locker Room"
+	icon_state = "locker"
+
 /area/crew_quarters/locker/locker_toilet
 	name = "Locker Toilets"
 	icon_state = "toilet"
