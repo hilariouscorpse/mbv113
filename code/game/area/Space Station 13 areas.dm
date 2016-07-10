@@ -638,6 +638,21 @@ var/list/teleportlocs = list()
 	name = "Law Office"
 	icon_state = "law"
 
+
+//Wasteland
+
+/area/wasteland
+	name = "Wasteland"
+	icon_state = "orange"
+	safe = 1
+
+/area/wasteland/cafe_z1
+	name = "Cafe"
+	icon_state = "wasteland_cafe"
+
+
+
+
 //Engineering
 
 /area/engine
