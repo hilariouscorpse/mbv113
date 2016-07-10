@@ -1,6 +1,6 @@
 ////WASTELAND LOOT/////////////
 /obj/effect/landmark/wastelandloot
-	name = "wasteland loot"
+	name = "wasteland_general"
 	var/list/poor
 	var/list/common
 	var/list/rare
@@ -29,5 +29,7 @@
 		new S(src.loc)
 	qdel(src)
 //////////////////////////////////////////
-
-
+/obj/effect/landmark/wastelandweapon
+	name = "weapon"
+/obj/effect/landmark/martfood
+	name = "superdupermart_food"

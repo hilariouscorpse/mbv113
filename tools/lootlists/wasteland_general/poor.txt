@@ -1,0 +1,9 @@
+/obj/item/trash/plate
+/obj/item/trash/can
+/obj/item/trash/sosjerky
+/obj/item/trash/candy
+/obj/item/trash/tray
+/obj/item/trash/chips
+/obj/item/weapon/cigbutt/cigarbutt
+/obj/item/weapon/cigbutt
+/obj/effect/decal/cleanable/ash
