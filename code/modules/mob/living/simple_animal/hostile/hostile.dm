@@ -45,7 +45,6 @@
 	if(AIStatus == AI_OFF)
 		return 0
 	var/list/possible_targets = ListTargets() //we look around for potential targets and make it a list for later use.
-
 	if(environment_smash)
 		EscapeConfinement()
 
@@ -210,6 +209,7 @@
 		var/obj/structure/closet/cardboard/C = target
 		C.open()
 		LoseTarget()
+		return
 	target.attack_animal(src)
 
 /mob/living/simple_animal/hostile/proc/Aggro()
