@@ -37,7 +37,7 @@
 	return t
 
 //Removes a few problematic characters
-/proc/sanitize_simple(var/t,var/list/repl_chars = list("\n"="#","\t"="#","ÿ"="ß"))//cyka
+/proc/sanitize_simple(var/t,var/list/repl_chars = list("\n"="#","\t"="#","ÿ"=LETTER_255))//cyka
 	for(var/char in repl_chars)
 		var/index = findtext(t, char)
 		while(index)
@@ -47,7 +47,12 @@
 
 //Runs byond's sanitization proc along-side sanitize_simple
 /proc/sanitize(t,list/repl_chars = null)
-	return html_encode(sanitize_simple(t,repl_chars))
+	t = html_encode(sanitize_simple(t,repl_chars))
+	var/index = findtext(t, LETTER_255)
+	while(index)
+		t = copytext(t, 1, index) + "&#255;" + copytext(t, index+1)
+		index = findtext(t, LETTER_255, index + 6)//index+len("&#255;")
+	return t
 
 //Runs sanitize and strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' after sanitize() calls byond's html_encode()

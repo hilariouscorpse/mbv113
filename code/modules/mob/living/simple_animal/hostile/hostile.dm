@@ -45,7 +45,6 @@
 	if(AIStatus == AI_OFF)
 		return 0
 	var/list/possible_targets = ListTargets() //we look around for potential targets and make it a list for later use.
-
 	if(environment_smash)
 		EscapeConfinement()
 
@@ -70,6 +69,8 @@
 		for(var/obj/mecha/M in mechas_list)
 			if(get_dist(M, src) <= vision_range && can_see(src, M, vision_range))
 				L += M
+		for(var/obj/structure/closet/cardboard/C in oview(src, vision_range))
+			L += C
 	else
 		var/list/Objects = oview(vision_range, src)
 		L += Objects
@@ -91,6 +92,10 @@
 	return Target //We now have a target
 
 /mob/living/simple_animal/hostile/proc/Found(atom/A)//This is here as a potential override to pick a specific target if available
+	if(istype(A,/obj/structure/closet/cardboard))
+		var/obj/structure/closet/cardboard/C = A
+		if(!C.opened)
+			return 1
 	return
 
 /mob/living/simple_animal/hostile/proc/PickTarget(list/Targets)//Step 3, pick amongst the possible, attackable targets
@@ -108,6 +113,8 @@
 /mob/living/simple_animal/hostile/CanAttack(atom/the_target)//Can we actually attack a possible target?
 	if(see_invisible < the_target.invisibility)//Target's invisible to us, forget it
 		return 0
+	if(istype(the_target,/obj/structure/closet/cardboard))
+		return 1
 	if(search_objects < 2)
 		if(istype(the_target, /obj/mecha))
 			var/obj/mecha/M = the_target
@@ -134,6 +141,8 @@
 				if(faction_check && !attack_same)
 					return 0
 			return 1
+	if(istype(the_target,/obj/structure/closet/cardboard))
+		return 1
 	if(isobj(the_target))
 		if(the_target.type in wanted_objects)
 			return 1
@@ -196,6 +205,11 @@
 			FindTarget()
 
 /mob/living/simple_animal/hostile/proc/AttackingTarget()
+	if(istype(target,/obj/structure/closet/cardboard))
+		var/obj/structure/closet/cardboard/C = target
+		C.open()
+		LoseTarget()
+		return
 	target.attack_animal(src)
 
 /mob/living/simple_animal/hostile/proc/Aggro()

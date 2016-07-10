@@ -51,7 +51,7 @@
 	if (!msg)
 		message_admins("[key_name_admin(src)] has cancelled their reply to [key_name(C, 0, 0)]'s admin help.")
 		return
-	cmd_admin_pm(whom, msg)
+	cmd_admin_pm(whom,sanitize(msg))
 
 //takes input from cmd_admin_pm_context, cmd_admin_pm_panel or /client/Topic and sends them a PM.
 //Fetching a message if needed. src is the sender and C is the target client
@@ -75,7 +75,7 @@
 	//get message text, limit it's length.and clean/escape html
 	if(!msg)
 		msg = input(src,"Message:", "Private message to [key_name(C, 0, 0)]") as text|null
-
+		msg = sanitize(msg)
 		if(!msg)	return
 		if(!C)
 			if(holder)	src << "<font color='red'>Error: Admin-PM: Client not found.</font>"

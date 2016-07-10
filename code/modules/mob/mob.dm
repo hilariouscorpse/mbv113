@@ -471,7 +471,10 @@ var/list/slot_equipment_priority = list( \
 	if ((stat != 2 || !( ticker )))
 		usr << "<span class='boldnotice'>You must be dead to use this!</span>"
 		return
-
+	//if((world.time-src.timeofdeath)<6000)
+	//	var/deathtime = world.time-src.timeofdeath
+	//	src<<"<span class='boldnotice'>You must be dead for 10 minutes for respawn. You only dead for[time2text(deathtime,"mm")]</span>"
+	//	return
 	log_game("[usr.name]/[usr.key] used abandon mob.")
 
 	usr << "<span class='boldnotice'>Please roleplay correctly!</span>"

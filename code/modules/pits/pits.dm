@@ -47,7 +47,6 @@ obj/dugpit/New(lnk)
 	icon_state = "asteroid"
 	icon_plating = "asteroid"
 	explosion_block = 50
-	layer = TURF_LAYER + 0.1
 	var/environment_type = "wasteland17"
 	var/turf_type = /turf/simulated/floor/plating/asteroid //Because caves do whacky shit to revert to normal
 	var/dug = 0       //0 = has not yet been dug, 1 = has already been dug
@@ -57,7 +56,8 @@ obj/dugpit/New(lnk)
 	var/pitcontents = list()
 	var/obj/dugpit/mypit
 	var/unburylevel = 0
-
+/turf/simulated/floor/plating/asteroid/can_have_cabling()
+	return 1
 /turf/simulated/floor/plating/asteroid/New()
 	icon_state = pick("wasteland1", "wasteland2", "wasteland3", "wasteland4", "wasteland5", "wasteland6", "wasteland7",
 				"wasteland8", "wasteland9", "wasteland10", "wasteland11", "wasteland12", "wasteland13", "wasteland14",

@@ -10,14 +10,14 @@
 	var/category = CAT_NONE //where it shows up in the crafting UI
 
 
-/datum/table_recipe/pin_removal
+/*/datum/table_recipe/pin_removal
 	name = "Pin Removal"
 	result = /obj/item/weapon/gun
 	reqs = list(/obj/item/weapon/gun = 1)
 	parts = list(/obj/item/weapon/gun = 1)
 	tools = list(/obj/item/weapon/gun/energy/plasmacutter, /obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 50
-	category = CAT_WEAPON
+	category = CAT_WEAPON*/
 
 /datum/table_recipe/IED
 	name = "IED"
@@ -58,7 +58,7 @@
 	time = 40
 	category = CAT_WEAPON
 
-/datum/table_recipe/stunprod
+/*/datum/table_recipe/stunprod
 	name = "Stunprod"
 	result = /obj/item/weapon/melee/baton/cattleprod
 	reqs = list(/obj/item/weapon/restraints/handcuffs/cable = 1,
@@ -67,9 +67,9 @@
 				/obj/item/weapon/stock_parts/cell = 1)
 	time = 40
 	parts = list(/obj/item/weapon/stock_parts/cell = 1)
-	category = CAT_WEAPON
+	category = CAT_WEAPON*/
 
-/datum/table_recipe/teleprod
+/*/datum/table_recipe/teleprod
 	name = "Teleprod"
 	result = /obj/item/weapon/melee/baton/cattleprod/teleprod
 	reqs = list(/obj/item/weapon/restraints/handcuffs/cable = 1,
@@ -79,7 +79,7 @@
 				/obj/item/weapon/ore/bluespace_crystal = 1)
 	time = 60
 	parts = list(/obj/item/weapon/stock_parts/cell = 1)
-	category = CAT_WEAPON
+	category = CAT_WEAPON*/
 
 //datum/table_recipe/tailclub
 //	name = "Tail Club"
@@ -105,7 +105,7 @@
 	time = 30
 	category= CAT_WEAPON
 
-/datum/table_recipe/ed209
+/*/datum/table_recipe/ed209
 	name = "ED209"
 	result = /mob/living/simple_animal/bot/ed209
 	reqs = list(/obj/item/robot_parts/robot_suit = 1,
@@ -162,9 +162,9 @@
 				/obj/item/device/assembly/prox_sensor = 1,
 				/obj/item/robot_parts/r_arm = 1)
 	time = 80
-	category = CAT_ROBOT
+	category = CAT_ROBOT*/
 
-/datum/table_recipe/flamethrower
+/*/datum/table_recipe/flamethrower
 	name = "Flamethrower"
 	result = /obj/item/weapon/flamethrower
 	reqs = list(/obj/item/weapon/weldingtool = 1,
@@ -174,9 +174,9 @@
 				/obj/item/weapon/weldingtool = 1)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 20
-	category = CAT_WEAPON
+	category = CAT_WEAPON*/
 
-/datum/table_recipe/meteorshot
+/*/datum/table_recipe/meteorshot
 	name = "Meteorshot Shell"
 	result = /obj/item/ammo_casing/shotgun/meteorshot
 	reqs = list(/obj/item/ammo_casing/shotgun/techshell = 1,
@@ -265,7 +265,7 @@
 				/obj/item/stack/packageWrap = 5,)
 	tools = list(/obj/item/weapon/screwdriver)
 	time = 150
-	category = CAT_WEAPON
+	category = CAT_WEAPON*/
 
 /datum/table_recipe/chainsaw
 	name = "Chainsaw"
@@ -277,7 +277,7 @@
 	time = 100
 	category = CAT_WEAPON
 
-/datum/table_recipe/spooky_camera
+/*/datum/table_recipe/spooky_camera
 	name = "Camera Obscura"
 	result = /obj/item/device/camera/spooky
 	time = 15
@@ -296,4 +296,4 @@
 	name = "Lizard Cloche Hat"
 	result = /obj/item/clothing/head/lizard
 	time = 20
-	reqs = list(/obj/item/stack/sheet/animalhide/lizard = 1)
+	reqs = list(/obj/item/stack/sheet/animalhide/lizard = 1)*/

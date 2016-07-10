@@ -17,7 +17,17 @@
 	icon_state = "normal_fence"
 	density = 1
 	anchored = 1
+/obj/structure/fence/fencenormal/wood
+	name = "wooden dence"
+	icon = 'icons/obj/w_fence_1.dmi'
+	icon_state = "normal_fence_1"
 
+/obj/structure/fence/fencenormal/wood/New()
+	..()
+	icon_state = pick("normal_fence_1","normal_fence_2","normal_fence_3","normal_fence_4")
+
+/obj/structure/fence/fencenormal/wood/attackby(obj/item/weapon/W, mob/user, params)
+	return
 /obj/structure/fence/fencenormal/New()
 	layer = 4.2
 
@@ -63,6 +73,10 @@
 	icon_state = "fence_corner"
 	density = 1
 	anchored = 1
+/obj/structure/fence/fencecorner/wood
+	name = "wooden fence"
+	icon = 'icons/obj/w_fence_1.dmi'
+
 
 /obj/structure/fence/fencecorner/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W, /obj/item/weapon/wirecutters))

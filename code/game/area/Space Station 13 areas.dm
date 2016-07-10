@@ -593,6 +593,10 @@ var/list/teleportlocs = list()
 	name = "Locker Room"
 	icon_state = "locker"
 
+/area/crew_quarters/vault_locker
+	name = "Vault Locker Room"
+	icon_state = "locker"
+
 /area/crew_quarters/locker/locker_toilet
 	name = "Locker Toilets"
 	icon_state = "toilet"
@@ -633,6 +637,21 @@ var/list/teleportlocs = list()
 /area/lawoffice
 	name = "Law Office"
 	icon_state = "law"
+
+
+//Wasteland
+
+/area/wasteland
+	name = "Wasteland"
+	icon_state = "orange"
+	safe = 1
+
+/area/wasteland/cafe_z1
+	name = "Cafe"
+	icon_state = "wasteland_cafe"
+
+
+
 
 //Engineering
 
@@ -1599,7 +1618,7 @@ var/list/the_station_areas = list (
 	/area/ai_monitored/storage/eva,
 	/area/crew_quarters/resident_hallway,
 	/area/crew_quarters/sleep_resident_bot,
-	/area/crew_quarters/sleep_resident_lower_left,
+	/area/crew_quarters/sleep_resident_bot_left,
 	/area/crew_quarters/sleep_resident_mid,
 	/area/crew_quarters/sleep_resident_mid_right,
 	/area/crew_quarters/sleep_resident_top,

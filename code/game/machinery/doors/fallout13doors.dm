@@ -9,41 +9,93 @@
 	density = 1
 	anchored = 1
 	layer = 4.2
-	var/woodopen_sound = 'sound/machines/door_open.ogg'
-	var/woodclose_sound = 'sound/machines/door_close.ogg'
 
-/obj/machinery/dooor/wood/attackby(obj/item/weapon/I, mob/living/user, params)
-	if (density)
-		icon_state = "wastelandopen"
-		playsound(src.loc, woodopen_sound, 30, 0, 0)
-		opacity = 0
+/obj/machinery/dooor
+	var/islock = 0
+	var/lock_id = 0
+	var/locked = 0
+	var/sound_open = 'sound/machines/door_open.ogg'
+	var/sound_close = 'sound/machines/door_close.ogg'
+	density = 1
+/obj/machinery/dooor/attackby(obj/item/weapon/I, mob/living/user, params)
+	if(istype(I,/obj/item/weapon/lock))
+		var/obj/item/weapon/lock/L = I
+		if(islock)
+			user << "Lock already installed here"
+			return
+		user << "You start installing the lock"
+		if(do_after(user, 10, target = src))
+			lock_id = L.id
+			islock = 1
+			qdel(I)
+			user << "You successfully install the lock"
+			return
+		user << "You failed to install the lock"
+		return
+	if(istype(I,/obj/item/weapon/doorkey))
+		var/obj/item/weapon/lock/K = I
+		if(!islock)
+			user << "There is no lock installed"
+			return
+		if(locked)
+			if(lock_id == K.id)
+				user << "You unlock the door"
+				locked = 0
+				return
+			else
+				user << "There is a wrong key"
+				return
+		if(!locked && density)
+			if(lock_id == K.id)
+				user << "You lock the door"
+				locked = 1
+				return
+			else
+				user << "There is a wrong key"
+				return
+	if(!locked)
+		if (density)
+			icon_state = "[icon_state]open"
+			playsound(src.loc, sound_open, 30, 0, 0)
+			opacity = 0
+		else
+			icon_state = copytext(icon_state,1,lentext(icon_state)-3)
+			playsound(src.loc, sound_close, 30, 0, 0)
+			opacity = 1
+		density = !density
+		return
 	else
-		icon_state = "wasteland"
-		playsound(src.loc, woodclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
+		user << "The door is locked"
 
-/obj/machinery/dooor/wood/attack_hand(mob/user)
-	if (density)
-		icon_state = "wastelandopen"
-		playsound(src.loc, woodopen_sound, 30, 0, 0)
-		opacity = 0
+/obj/machinery/dooor/attack_hand(mob/user)
+	if(!locked)
+		if (density)
+			icon_state = "[icon_state]open"
+			playsound(src.loc, sound_open, 30, 0, 0)
+			opacity = 0
+		else
+			icon_state = copytext(icon_state,1,lentext(icon_state)-3)
+			playsound(src.loc, sound_close, 30, 0, 0)
+			opacity = 1
+		density = !density
+		return
 	else
-		icon_state = "wasteland"
-		playsound(src.loc, woodclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
+		user << "The door is locked"
+/obj/machinery/dooor/attack_tk(mob/user)
+	if(!locked)
+		if (density)
+			icon_state = "[icon_state]open"
+			playsound(src.loc, sound_open, 30, 0, 0)
+			opacity = 0
+		else
+			icon_state = copytext(icon_state,1,lentext(icon_state)-3)
+			playsound(src.loc, sound_close, 30, 0, 0)
+			opacity = 1
+		density = !density
+		return
+	else
+		user << "The door is locked"
 
-/obj/machinery/dooor/wood/attack_tk(mob/user)
-	if (density)
-		icon_state = "wastelandopen"
-		playsound(src.loc, woodopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "wasteland"
-		playsound(src.loc, woodclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
 
 /obj/machinery/dooor/wood/CanPass(atom/movable/mover, turf/target, height=0)
 	if (mover.loc == loc)
@@ -65,41 +117,6 @@
 	density = 1
 	anchored = 1
 	layer = 4.2
-	var/houseopen_sound = 'sound/machines/door_open.ogg'
-	var/houseclose_sound = 'sound/machines/door_close.ogg'
-
-/obj/machinery/dooor/house/attackby(obj/item/weapon/I, mob/living/user, params)
-	if (density)
-		icon_state = "houseopen"
-		playsound(src.loc, houseopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "house"
-		playsound(src.loc, houseclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
-
-/obj/machinery/dooor/house/attack_hand(mob/user)
-	if (density)
-		icon_state = "houseopen"
-		playsound(src.loc, houseopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "house"
-		playsound(src.loc, houseclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
-
-/obj/machinery/dooor/house/attack_tk(mob/user)
-	if (density)
-		icon_state = "houseopen"
-		playsound(src.loc, houseopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "house"
-		playsound(src.loc, houseclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
 
 /obj/machinery/dooor/house/CanPass(atom/movable/mover, turf/target, height=0)
 	if (mover.loc == loc)
@@ -111,9 +128,6 @@
 		return 1
 	return !density
 
-
-//I can only copypaste you know...
-
 /obj/machinery/dooor/room
 	name = "wooden door"
 	desc = "It opens and closes."
@@ -123,41 +137,6 @@
 	density = 1
 	anchored = 1
 	layer = 4.2
-	var/woodroomopen_sound = 'sound/machines/door_open.ogg'
-	var/woodroomclose_sound = 'sound/machines/door_close.ogg'
-
-/obj/machinery/dooor/room/attackby(obj/item/weapon/I, mob/living/user, params)
-	if (density)
-		icon_state = "roomopen"
-		playsound(src.loc, woodroomopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "room"
-		playsound(src.loc, woodroomclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
-
-/obj/machinery/dooor/room/attack_hand(mob/user)
-	if (density)
-		icon_state = "roomopen"
-		playsound(src.loc, woodroomopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "room"
-		playsound(src.loc, woodroomclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
-
-/obj/machinery/dooor/room/attack_tk(mob/user)
-	if (density)
-		icon_state = "roomopen"
-		playsound(src.loc, woodroomopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "room"
-		playsound(src.loc, woodroomclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
 
 /obj/machinery/dooor/room/CanPass(atom/movable/mover, turf/target, height=0)
 	if (mover.loc == loc)
@@ -180,41 +159,6 @@
 	density = 1
 	anchored = 1
 	layer = 4.2
-	var/dirtyglassopen_sound = 'sound/machines/door_open.ogg'
-	var/dirtyglassclose_sound = 'sound/machines/door_close.ogg'
-
-/obj/machinery/dooor/dirtyglass/attackby(obj/item/weapon/I, mob/living/user, params)
-	if (density)
-		icon_state = "dirtyglassopen"
-		playsound(src.loc, dirtyglassopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "dirtyglass"
-		playsound(src.loc, dirtyglassclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
-
-/obj/machinery/dooor/dirtyglass/attack_hand(mob/user)
-	if (density)
-		icon_state = "dirtyglassopen"
-		playsound(src.loc, dirtyglassopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "dirtyglass"
-		playsound(src.loc, dirtyglassclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
-
-/obj/machinery/dooor/dirtyglass/attack_tk(mob/user)
-	if (density)
-		icon_state = "dirtyglassopen"
-		playsound(src.loc, dirtyglassopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "dirtyglass"
-		playsound(src.loc, dirtyglassclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
 
 /obj/machinery/dooor/dirtyglass/CanPass(atom/movable/mover, turf/target, height=0)
 	if (mover.loc == loc)
@@ -236,41 +180,6 @@
 	density = 1
 	anchored = 1
 	layer = 4.2
-	var/fakeglassopen_sound = 'sound/machines/door_open.ogg'
-	var/fakeglassclose_sound = 'sound/machines/door_close.ogg'
-
-/obj/machinery/dooor/fakeglass/attackby(obj/item/weapon/I, mob/living/user, params)
-	if (density)
-		icon_state = "fakeglassopen"
-		playsound(src.loc, fakeglassopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "fakeglass"
-		playsound(src.loc, fakeglassclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
-
-/obj/machinery/dooor/fakeglass/attack_hand(mob/user)
-	if (density)
-		icon_state = "fakeglassopen"
-		playsound(src.loc, fakeglassopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "fakeglass"
-		playsound(src.loc, fakeglassclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
-
-/obj/machinery/dooor/fakeglass/attack_tk(mob/user)
-	if (density)
-		icon_state = "fakeglassopen"
-		playsound(src.loc, fakeglassopen_sound, 30, 0, 0)
-		opacity = 0
-	else
-		icon_state = "fakeglass"
-		playsound(src.loc, fakeglassclose_sound, 30, 0, 0)
-		opacity = 1
-	density = !density
 
 /obj/machinery/dooor/fakeglass/CanPass(atom/movable/mover, turf/target, height=0)
 	if (mover.loc == loc)
@@ -292,35 +201,6 @@
 	density = 1
 	anchored = 1
 	layer = 4.2
-	var/brokenglassopen_sound = 'sound/machines/door_open.ogg'
-	var/brokenglassclose_sound = 'sound/machines/door_close.ogg'
-
-/obj/machinery/dooor/brokenglass/attackby(obj/item/weapon/I, mob/living/user, params)
-	if (density)
-		icon_state = "brokenglassopen"
-		playsound(src.loc, brokenglassopen_sound, 30, 0, 0)
-	else
-		icon_state = "brokenglass"
-		playsound(src.loc, brokenglassclose_sound, 30, 0, 0)
-	density = !density
-
-/obj/machinery/dooor/brokenglass/attack_hand(mob/user)
-	if (density)
-		icon_state = "brokenglassopen"
-		playsound(src.loc, brokenglassopen_sound, 30, 0, 0)
-	else
-		icon_state = "brokenglass"
-		playsound(src.loc, brokenglassclose_sound, 30, 0, 0)
-	density = !density
-
-/obj/machinery/dooor/brokenglass/attack_tk(mob/user)
-	if (density)
-		icon_state = "brokenglassopen"
-		playsound(src.loc, brokenglassopen_sound, 30, 0, 0)
-	else
-		icon_state = "brokenglass"
-		playsound(src.loc, brokenglassclose_sound, 30, 0, 0)
-	density = !density
 
 /obj/machinery/dooor/brokenglass/CanPass(atom/movable/mover, turf/target, height=0)
 	if (mover.loc == loc)
@@ -342,35 +222,7 @@
 	density = 1
 	anchored = 1
 	layer = 4.2
-	var/glassopen_sound = 'sound/machines/door_open.ogg'
-	var/glassclose_sound = 'sound/machines/door_close.ogg'
 
-/obj/machinery/dooor/glass/attackby(obj/item/weapon/I, mob/living/user, params)
-	if (density)
-		icon_state = "glassopen"
-		playsound(src.loc, glassopen_sound, 30, 0, 0)
-	else
-		icon_state = "glass"
-		playsound(src.loc, glassclose_sound, 30, 0, 0)
-	density = !density
-
-/obj/machinery/dooor/glass/attack_hand(mob/user)
-	if (density)
-		icon_state = "glassopen"
-		playsound(src.loc, glassopen_sound, 30, 0, 0)
-	else
-		icon_state = "glass"
-		playsound(src.loc, glassclose_sound, 30, 0, 0)
-	density = !density
-
-/obj/machinery/dooor/glass/attack_tk(mob/user)
-	if (density)
-		icon_state = "glassopen"
-		playsound(src.loc, glassopen_sound, 30, 0, 0)
-	else
-		icon_state = "glass"
-		playsound(src.loc, glassclose_sound, 30, 0, 0)
-	density = !density
 
 /obj/machinery/dooor/glass/CanPass(atom/movable/mover, turf/target, height=0)
 	if (mover.loc == loc)
@@ -392,41 +244,6 @@
 	density = 1
 	anchored = 1
 	layer = 4.2
-	var/dirtystoreopen_sound = 'sound/f13machines/doorstore_open.ogg'
-	var/dirtystoreclose_sound = 'sound/f13machines/doorstore_close.ogg'
-
-/obj/machinery/dooor/dirtystore/attackby(obj/item/weapon/I, mob/living/user, params)
-	if (density)
-		icon_state = "dirtystoreopen"
-		playsound(src.loc, dirtystoreopen_sound, 50, 0, 0)
-		opacity = 0
-	else
-		icon_state = "dirtystore"
-		playsound(src.loc, dirtystoreclose_sound, 50, 0, 0)
-		opacity = 1
-	density = !density
-
-/obj/machinery/dooor/dirtystore/attack_hand(mob/user)
-	if (density)
-		icon_state = "dirtystoreopen"
-		playsound(src.loc, dirtystoreopen_sound, 50, 0, 0)
-		opacity = 0
-	else
-		icon_state = "dirtystore"
-		playsound(src.loc, dirtystoreclose_sound, 50, 0, 0)
-		opacity = 1
-	density = !density
-
-/obj/machinery/dooor/dirtystore/attack_tk(mob/user)
-	if (density)
-		icon_state = "dirtystoreopen"
-		playsound(src.loc, dirtystoreopen_sound, 50, 0, 0)
-		opacity = 0
-	else
-		icon_state = "dirtystore"
-		playsound(src.loc, dirtystoreclose_sound, 50, 0, 0)
-		opacity = 1
-	density = !density
 
 /obj/machinery/dooor/dirtystore/CanPass(atom/movable/mover, turf/target, height=0)
 	if (mover.loc == loc)
@@ -448,35 +265,6 @@
 	density = 1
 	anchored = 1
 	layer = 4.2
-	var/storeopen_sound = 'sound/f13machines/doorstore_open.ogg'
-	var/storeclose_sound = 'sound/f13machines/doorstore_close.ogg'
-
-/obj/machinery/dooor/store/attackby(obj/item/weapon/I, mob/living/user, params)
-	if (density)
-		icon_state = "storeopen"
-		playsound(src.loc, storeopen_sound, 50, 0, 0)
-	else
-		icon_state = "store"
-		playsound(src.loc, storeclose_sound, 50, 0, 0)
-	density = !density
-
-/obj/machinery/dooor/store/attack_hand(mob/user)
-	if (density)
-		icon_state = "storeopen"
-		playsound(src.loc, storeopen_sound, 50, 0, 0)
-	else
-		icon_state = "store"
-		playsound(src.loc, storeclose_sound, 50, 0, 0)
-	density = !density
-
-/obj/machinery/dooor/store/attack_tk(mob/user)
-	if (density)
-		icon_state = "storeopen"
-		playsound(src.loc, storeopen_sound, 50, 0, 0)
-	else
-		icon_state = "store"
-		playsound(src.loc, storeclose_sound, 50, 0, 0)
-	density = !density
 
 /obj/machinery/dooor/store/CanPass(atom/movable/mover, turf/target, height=0)
 	if (mover.loc == loc)
