@@ -13,6 +13,8 @@
 /datum/configuration
 	var/name = "Configuration"			// datum name
 
+	var/genminimap = 0
+
 	var/server_name = null				// server name (the name of the game window)
 	var/station_name = null				// station name (the name of the station in-game)
 	var/server_suffix = 0				// generate numeric suffix based on server port
@@ -236,6 +238,8 @@
 			switch(name)
 				if("admin_legacy_system")
 					config.admin_legacy_system = 1
+				if("generate_minimap")
+					config.genminimap = 1
 				if("ban_legacy_system")
 					config.ban_legacy_system = 1
 				if("use_age_restriction_for_jobs")

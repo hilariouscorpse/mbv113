@@ -208,7 +208,7 @@
 	var/send_data_json = JSON.stringify(send_data)
 	send_data_json = replacetextEx(send_data_json, "'", "&apos;")
 	send_data_json = replacetextEx(send_data_json, "\improper", "")
-	send_data_json = replacetextEx(send_data_json, "ÿ", "")
+	send_data_json = replacetextEx(send_data_json, "ÿ", "ß")
 
 	// Populate it.
 	var/send_html = replacetextEx(SSnano.html, "\[data]", send_data_json)

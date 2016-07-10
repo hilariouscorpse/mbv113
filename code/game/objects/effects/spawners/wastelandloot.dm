@@ -9,6 +9,10 @@
 	var/item_amount = 1
 
 /obj/effect/landmark/wastelandloot/New()
+	poor = file2list("tools/lootlists/[name]/poor.txt")
+	common = file2list("tools/lootlists/[name]/common.txt")
+	rare = file2list("tools/lootlists/[name]/rare.txt")
+	ultrarare = file2list("tools/lootlists/[name]/ultrarare.txt")
 	var/x
 	for(var/i = 0;i<item_amount;i++)
 		x = rand(1,max)
@@ -25,16 +29,5 @@
 		new S(src.loc)
 	qdel(src)
 //////////////////////////////////////////
-/obj/effect/landmark/wastelandloot/superdupermart_food
-	poor = list(/obj/item/weapon/reagent_containers/food/snacks/egg/green,/obj/item/trash/can,/obj/item/trash/cheesie,
-				/obj/item/weapon/reagent_containers/food/snacks/cheesewedge)
 
-	common = list(/obj/item/weapon/reagent_containers/food/snacks/burger/rat,
-					/obj/item/weapon/reagent_containers/food/snacks/beans,
-					/obj/item/weapon/reagent_containers/food/snacks/meat/slab/meatproduct,
-					/obj/item/weapon/reagent_containers/food/snacks/meat/slab/bear)
-
-	rare = list(/obj/item/weapon/reagent_containers/food/snacks/kebab)
-
-	ultrarare = list(/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka)
 
