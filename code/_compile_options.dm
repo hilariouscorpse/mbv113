@@ -55,6 +55,8 @@
 
 #define USE_BYGEX
 
+#define LETTER_255	"¶"
+#define LETTER_255_CODE 182
 
 #ifndef SERVERTOOLS
 #define SERVERTOOLS 0

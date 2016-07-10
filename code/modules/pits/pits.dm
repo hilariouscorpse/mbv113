@@ -56,7 +56,8 @@ obj/dugpit/New(lnk)
 	var/pitcontents = list()
 	var/obj/dugpit/mypit
 	var/unburylevel = 0
-
+/turf/simulated/floor/plating/asteroid/can_have_cabling()
+	return 1
 /turf/simulated/floor/plating/asteroid/New()
 	icon_state = pick("wasteland1", "wasteland2", "wasteland3", "wasteland4", "wasteland5", "wasteland6", "wasteland7",
 				"wasteland8", "wasteland9", "wasteland10", "wasteland11", "wasteland12", "wasteland13", "wasteland14",

@@ -4,8 +4,7 @@
 
 	var/slowdown = 0 //negative for faster, positive for slower
 	var/intact = 1
-	var/baseturf = /turf/simulated/floor/plating
-
+	var/baseturf =/turf/simulated/floor/plating/asteroid
 	//Properties for open tiles (/floor)
 	var/oxygen = 0
 	var/carbon_dioxide = 0
