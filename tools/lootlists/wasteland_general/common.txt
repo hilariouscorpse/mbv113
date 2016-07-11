@@ -1,0 +1,13 @@
+/obj/item/weapon/pen
+/obj/item/weapon/kitchen/fork
+/obj/item/stack/packageWrap
+/obj/item/clothing/shoes/sneakers/brown
+/obj/item/clothing/under/pants/f13/cloth
+/obj/item/ammo_casing/a762
+/obj/item/weapon/shard
+/obj/item/weapon/broken_bottle
+/obj/effect/decal/remains/human
+/obj/item/weapon/crowbar/large
+/obj/item/weapon/storage/box/matches
+/obj/item/weapon/reagent_containers/food/drinks/drinkingglass
+/obj/item/weapon/screwdriver

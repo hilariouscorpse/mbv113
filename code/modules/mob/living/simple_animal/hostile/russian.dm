@@ -7,11 +7,11 @@
 	icon_gib = "syndicate_gib"
 	speak_chance = 0
 	turns_per_move = 5
+	environment_smash = 0
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
 	speed = 2
-	environment_smash = 0
 	maxHealth = 100
 	health = 100
 	harm_intent_damage = 10
