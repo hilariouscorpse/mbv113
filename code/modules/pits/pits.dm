@@ -118,6 +118,9 @@ obj/dugpit/New(lnk)
 
 /turf/simulated/floor/plating/asteroid/attackby(obj/item/W, mob/user, params)
 	//note that this proc does not call ..()
+	if(istype(W, /obj/item/stack/cable_coil))
+		var/obj/item/stack/cable_coil/coil = W
+		coil.place_turf(src, user)
 	if(!W || !user)
 		return 0
 	var/digging_speed = 0
