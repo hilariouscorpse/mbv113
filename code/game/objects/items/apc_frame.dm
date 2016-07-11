@@ -75,6 +75,9 @@
 	result_path = /obj/machinery/power/apc
 	inverse = 1
 
+/obj/item/wallframe/apc/wasteland
+	name = "swithcboard frame"
+	result_path = /obj/machinery/power/apc/wasteland
 
 /obj/item/wallframe/apc/try_build(turf/on_wall)
 	if(!..())

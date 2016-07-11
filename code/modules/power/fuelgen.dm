@@ -45,7 +45,7 @@
 			return
 		var/datum/reagents/R2 = Storage.reagents
 		R.trans_to(R2,C.amount_per_transfer_from_this)
-		user << "<span class='notice'>You transfer 10 units of fuel to generator</span>"
+		user << "<span class='notice'>You transfer [C.amount_per_transfer_from_this] units of fuel to generator</span>"
 	if(istype(O, /obj/item/weapon/wrench))
 		if(!anchored)
 			connect_to_network()
