@@ -24,6 +24,7 @@
 	R.remove_all(500)
 	user << "You empty the generator's fuel tank"
 /obj/machinery/power/port_gen/fuel/examine(mob/user)
+	..()
 	var/datum/reagents/R = Storage.reagents
 	var/S = 0
 	switch(R.total_volume)
