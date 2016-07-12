@@ -43,7 +43,7 @@
 /obj/item/weapon/keyring
 	name = "Keyring"
 	icon = 'icons/obj/stock_parts.dmi'
-	icon_state = "key"
+	icon_state = "keyring"
 	var/keys_n = 1
 	var/list/keys
 /obj/item/weapon/keyring/proc/getnumber()
