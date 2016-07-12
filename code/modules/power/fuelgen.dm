@@ -24,6 +24,7 @@
 	R.remove_all(500)
 	user << "You empty the generator's fuel tank"
 /obj/machinery/power/port_gen/fuel/examine(mob/user)
+	..()
 	var/datum/reagents/R = Storage.reagents
 	var/S = 0
 	switch(R.total_volume)
@@ -36,7 +37,6 @@
 		if(301 to 500)
 			S = "full"
 	user << "The fuel tank is [S]"
-	..()
 /obj/machinery/power/port_gen/fuel/attackby(obj/item/O, mob/user, params)
 	if(istype(O,/obj/item/weapon/reagent_containers))
 		var/obj/item/weapon/reagent_containers/C = O
