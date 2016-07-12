@@ -1,0 +1,14 @@
+/obj/item/weapon/stock_parts/cell
+/obj/item/weapon/shovel
+/obj/item/weapon/coin/silver
+/obj/item/device/flashlight
+/obj/item/clothing/gloves/color/black
+/obj/item/weapon/wrench
+/obj/item/weapon/wirecutters
+/obj/item/weapon/reagent_containers/pill/radaway
+/obj/item/device/radio
+/obj/item/clothing/under/f13/cowboyb
+/obj/item/device/geiger_counter
+/obj/item/clothing/glasses/sunglasses
+/obj/item/device/radio
+/obj/item/weapon/kitchen/knife

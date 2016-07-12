@@ -114,6 +114,7 @@ datum/species/human/spec_death(gibbed, mob/living/carbon/human/H)
 	default_features = list("mcolor" = "FFF")
 	use_skintones = 0
 	specflags = list(RADIMMUNE)
+	burnmod = 2
 
 /datum/species/bigmutant
 	name = "Supermutant"

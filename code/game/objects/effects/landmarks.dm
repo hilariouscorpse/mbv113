@@ -236,6 +236,7 @@
 /obj/effect/landmark/lootgenerator
 	var/list/loot
 	var/max = 6
+	var/amount = 1
 
 /obj/effect/landmark/lootgenerator/New()
 	var/howmuch = rand(1,max)
@@ -277,7 +278,6 @@
 	/obj/item/clothing/suit/armor/f13/kit,
 	/obj/item/weapon/stock_parts/cell/hyper)
 
-
 /obj/effect/landmark/radmark
 	name = "Radiation field"
 	icon_state = "x3"
@@ -289,9 +289,12 @@
 		if(M.stat != DEAD)
 			M.rad_act(dose)
 		for(var/obj/item/device/geiger_counter/G in M.contents)
-			G.radiation_count+= dose
+			G.rad_act(dose)
 	for(var/obj/item/device/geiger_counter/C in oview(radius, src))
-		C.radiation_count+= dose
+		C.rad_act(dose)
+	for(var/obj/structure/closet/S in oview(radius, src))
+		for(var/atom/A in S.contents)
+			A.rad_act(dose)
 	return
 /obj/effect/landmark/radmark/New()
 	SSobj.processing |= src

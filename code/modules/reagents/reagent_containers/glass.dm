@@ -259,6 +259,18 @@
 	slot_flags = SLOT_HEAD
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0) //Weak melee protection, because you can wear it on your head
 
+/obj/item/weapon/reagent_containers/glass/canister
+	name = "canister"
+	desc = "It's a big fuel can"
+	w_class = 3
+	amount_per_transfer_from_this = 50
+	possible_transfer_amounts = list(50,100,150)
+	volume = 250
+	icon = 'icons/obj/janitor.dmi'
+	icon_state = "canister"
+
+
+
 /obj/item/weapon/reagent_containers/glass/bucket/attackby(obj/O, mob/user, params)
 	if(istype(O, /obj/item/weapon/mop))
 		if(reagents.total_volume < 1)

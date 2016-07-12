@@ -1,0 +1,4 @@
+/obj/item/weapon/reagent_containers/food/snacks/egg/green
+/obj/item/trash/can
+/obj/item/trash/cheesie
+/obj/item/weapon/reagent_containers/food/snacks/cheesewedge

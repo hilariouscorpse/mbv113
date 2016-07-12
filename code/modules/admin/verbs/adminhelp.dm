@@ -93,7 +93,7 @@
 	adminhelptimerid = addtimer(src, "giveadminhelpverb", 1200, FALSE) //2 minute cooldown of admin helps
 
 	msg = keywords_lookup(msg)
-
+	msg = sanitize(msg)
 	if(!mob)	return						//this doesn't happen
 
 	var/ref_mob = "\ref[mob]"
